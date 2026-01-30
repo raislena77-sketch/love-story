@@ -12,19 +12,16 @@
         .gold-text { color: #d4af37; }
         
            /* Стиль для фото - ЖЕСТКИЙ ВАРИАНТ */
-       .portrait-img {
-            width: 100%;
-            height: 500px;  /* Явно задаем высоту большого портрета */
-            object-fit: cover; /* Обрезает лишнее, но заполняет всё пространство фото */
-            border-radius: 2px;
-            display: block; 
-        }
-        
-        .img-wrapper:hover .portrait-img {
-            transform: scale(1.03); 
-            filter: brightness(1.1);
-            cursor: pointer;
-        }
+         /* Финальный стиль для правильных портретов */
+    .portrait-img {
+        width: 100%;
+        height: 100%; /* Заполняем контейнер */
+        aspect-ratio: 2/3; /* Идеальная портретная пропорция (как в камере) */
+        object-fit: cover; /* Заполняет рамку без искажений (не растягивает) */
+        object-position: top center; /* ГЛАВНОЕ: Держит фокус на головах! */
+        border-radius: 2px;
+        display: block;
+    }
     </style>
 </head>
 <body class="antialiased">
